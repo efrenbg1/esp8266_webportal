@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1{
+text-shadow: 2px 1.5px red;
+font-family: "Georgia", Times, serif;
+margin: 5%;
+}
+body {
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  background-color: #2b3e4c;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container * {
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 0 8px;
+  justify-content: space-between;  
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 220px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+  padding: 15px;
+  border: none;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: red;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.flex-inner li {
+  width: 100px;
+}
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+</head>
+<body>
+<center>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<h1>WiFi settings</h1>
+</center>
+<div class="container">
+  <form action="/wifi_commit">
+    <ul class="flex-outer">
+      <li>
+        <label for="first-name">SSID:</label>
+        <input type="text" name="#" value="" id="first-name" placeholder="Current: ">
+      </li>
+      <li>
+        <label for="last-name">Password:</label>
+        <input type="text" name="#" value="" id="last-name" placeholder="">
+      </li>
+      <li>
+        <button type="submit">Submit</button>
+      </li>
+    </ul>
+  </form>
+  </div>
+</body>
+
+</html>
